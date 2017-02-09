@@ -2,7 +2,6 @@
 #include "text_factory.h"
 
 
-
 //===================================CONTENT_TEXT=====↓↓↓======================================================
 void set_text_by_row(int row, TextLayer * text_layer)
 {
@@ -25,23 +24,29 @@ void set_text_by_row(int row, TextLayer * text_layer)
       }
 }
 //===================================CONTENT_BITMAP=====↓↓↓======================================================
-void set_image_by_row(int row, TextLayer * text_layer)
+void set_image_by_row(int row, BitmapLayer *image_layer, GBitmap *content_image)
 {
     switch(row){
      case 0:
-         text_layer_set_text(text_layer, "First text");
+//        content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE);
+//        bitmap_layer_set_bitmap(image_layer, content_image);
+       
       break;
       case 1:
-          text_layer_set_text(text_layer, "Agree,/Appear,/Believe,/Belong,/Concern,/Consist,/Contain,/Depend,/Deserve,/Disagree,/Dislike,/Doubt,/feel (=have an opinion),/fit,/hate,/hear,/imagine,/impress,/include,/involve,/know,/like,/love,/matter,/mean,/measure (=be long),/mind,/need,/owe,/own,/prefer,/promise,/realise,/recognize,/remember,/seem,/sound,/suppose,/surprise,/understand,/want,/weigh (=have weight),/wish,/be,/have,/see,/taste (also: smell,/ feel,/ look),/think,/");
+       content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE_1);
+       bitmap_layer_set_bitmap(image_layer, content_image);
       break;
          case 2:
-         text_layer_set_text(text_layer, "The API documentation describes all the possible MenuLayerCallbacks that can be associated with a MenuLayer, but the ones we will be using for a simple example will be:");
+       content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE);
+       bitmap_layer_set_bitmap(image_layer, content_image);
       break;
          case 3:
-         text_layer_set_text(text_layer, "For the draw_row_handler(), we will need to be able to alter what is drawn in the row depending on which row it is. This can be done by switching the cell_index->row property. You can use the presented GContext however you like for any of the SDK drawing functions, but to keep things simple we will use the pre-made drawing functions provided by the SDK. With these two last points combined, the draw_row_callback() function transforms into this beast:");
+        content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE_2);
+       bitmap_layer_set_bitmap(image_layer, content_image);
       break;
          case 4:
-         text_layer_set_text(text_layer, "So that’s how to setup a basic MenuLayer. An extended application like those mentioned previously will use char[] buffers to store each row’s text, modified in a in_received signature AppMessage callback, and calling menu_layer_reload_data() in that AppMessage callback, thus updating the MenuLayer with the new data.");
+//        content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE);
+//        bitmap_layer_set_bitmap(image_layer, content_image);   
       break;
       }
 }

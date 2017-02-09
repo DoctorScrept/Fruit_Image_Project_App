@@ -31,28 +31,20 @@ static void content_window_load(Window *window)
   
    content_scroll_layer = scroll_layer_create(GRect(0, 16, 144, 168));
    scroll_layer_set_click_config_onto_window(content_scroll_layer, content_window);
-//==========↓↓↓================IMAGE==============↓↓↓=====================
-   content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE);
    
+//==========↓↓↓================IMAGE==============↓↓↓=====================
+      
    content_image_layer= bitmap_layer_create(GRect(0,0,144,120));
-   bitmap_layer_set_bitmap(content_image_layer, content_image);
+    
+   set_image_by_row(selected_main_menu_item, content_image_layer,content_image);
+   
+  // bitmap_layer_set_bitmap(content_image_layer, content_image);
    bitmap_layer_set_compositing_mode(content_image_layer, GCompOpSet);
    scroll_layer_add_child(content_scroll_layer, bitmap_layer_get_layer(content_image_layer));
+   
  //==========↑↑↑================IMAGE==============↑↑↑=====================  
-   content_text_layer = text_layer_create(GRect(0, 150, 144, 2000));
    
-   
-   
-//     //-----------------------------------------TIME---------------------------------↓↓↓↓↓-----------//  
-//    text_timeL = text_layer_create(GRect(115, 0, 30, 15));                                                                                
-//    tick_timer_service_subscribe(MINUTE_UNIT, tick_handler1); 
-//    // ПОМЕНЯТЬ ШРИФТ (для часов) !!!                             ↓↓↓↓↓    
-//    text_layer_set_font(text_timeL, fonts_get_system_font(FONT_KEY_GOTHIC_14_BOLD));
-                   
-//    layer_add_child(content_window_root_layer, text_layer_get_layer(text_timeL));
-//  //-----------------------------------------TIME------------------------------------↑↑↑↑↑-----------//
-   
-   
+   content_text_layer = text_layer_create(GRect(0, 150, 144, 2000)); 
    
    set_text_by_row(selected_main_menu_item, content_text_layer);
    

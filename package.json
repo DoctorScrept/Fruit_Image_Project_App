@@ -11,6 +11,18 @@
         "resources": {
             "media": [
                 {
+                    "file": "images/Orange_150x150.png",
+                    "name": "TEST_IMAGE_1",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Tomato_150x150.png",
+                    "name": "TEST_IMAGE_2",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
                     "file": "images/banana100x100.png",
                     "name": "TEST_IMAGE",
                     "targetPlatforms": null,
