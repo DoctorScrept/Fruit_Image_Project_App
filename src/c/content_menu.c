@@ -34,7 +34,7 @@ static void content_window_load(Window *window)
    
 //==========↓↓↓================IMAGE==============↓↓↓=====================
       
-   content_image_layer= bitmap_layer_create(GRect(0,0,144,120));
+   content_image_layer= bitmap_layer_create(GRect(0,0,144,250));
     
    set_image_by_row(selected_main_menu_item, content_image_layer,content_image);
    
@@ -44,7 +44,7 @@ static void content_window_load(Window *window)
    
  //==========↑↑↑================IMAGE==============↑↑↑=====================  
    
-   content_text_layer = text_layer_create(GRect(0, 150, 144, 2000)); 
+   content_text_layer = text_layer_create(GRect(0, 800, 144, 2000)); 
    
    set_text_by_row(selected_main_menu_item, content_text_layer);
    
@@ -53,7 +53,7 @@ static void content_window_load(Window *window)
    
                               GSize max_size;
                                  max_size.w =144;
-                                 max_size.h = text_layer_get_content_size(content_text_layer).h+300;
+                                 max_size.h = text_layer_get_content_size(content_text_layer).h+1000;
                               text_layer_set_size(content_text_layer, max_size);
                               scroll_layer_set_content_size(content_scroll_layer, GSize(144, max_size.h));
 } 

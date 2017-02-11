@@ -21,6 +21,9 @@ void set_text_by_row(int row, TextLayer * text_layer)
          case 4:
          text_layer_set_text(text_layer, "So that’s how to setup a basic MenuLayer. An extended application like those mentioned previously will use char[] buffers to store each row’s text, modified in a in_received signature AppMessage callback, and calling menu_layer_reload_data() in that AppMessage callback, thus updating the MenuLayer with the new data.");
       break;
+         case 5:
+         text_layer_set_text(text_layer, "So that’s how to setup a basic MenuLayer. An extended application like those mentioned previously will use char[] buffers to store each row’s text, modified in a in_received signature AppMessage callback, and calling menu_layer_reload_data() in that AppMessage callback, thus updating the MenuLayer with the new data.");
+      break;
       }
 }
 //===================================CONTENT_BITMAP=====↓↓↓======================================================
@@ -28,8 +31,8 @@ void set_image_by_row(int row, BitmapLayer *image_layer, GBitmap *content_image)
 {
     switch(row){
      case 0:
-//        content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE);
-//        bitmap_layer_set_bitmap(image_layer, content_image);
+        content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE);
+        bitmap_layer_set_bitmap(image_layer, content_image);
        
       break;
       case 1:
@@ -37,16 +40,20 @@ void set_image_by_row(int row, BitmapLayer *image_layer, GBitmap *content_image)
        bitmap_layer_set_bitmap(image_layer, content_image);
       break;
          case 2:
-       content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE);
+       content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE_2);
        bitmap_layer_set_bitmap(image_layer, content_image);
       break;
          case 3:
-        content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE_2);
+        content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE_3);
        bitmap_layer_set_bitmap(image_layer, content_image);
       break;
          case 4:
-//        content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE);
-//        bitmap_layer_set_bitmap(image_layer, content_image);   
+       content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE_4);
+       bitmap_layer_set_bitmap(image_layer, content_image);   
+      break;
+         case 5:
+       content_image = gbitmap_create_with_resource(RESOURCE_ID_TEST_IMAGE_5);
+       bitmap_layer_set_bitmap(image_layer, content_image);   
       break;
       }
 }
