@@ -11,26 +11,14 @@
         "resources": {
             "media": [
                 {
-                    "file": "images/Good.png",
-                    "name": "TEST_IMAGE_5",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
                     "file": "images/nice.png",
                     "name": "TEST_IMAGE_4",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
                 {
-                    "file": "images/Bushido_135x.png",
-                    "name": "TEST_IMAGE_3",
-                    "targetPlatforms": null,
-                    "type": "bitmap"
-                },
-                {
-                    "file": "images/Orange_150x150.png",
-                    "name": "TEST_IMAGE_1",
+                    "file": "images/banana100x100.png",
+                    "name": "TEST_IMAGE",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 },
@@ -41,8 +29,20 @@
                     "type": "bitmap"
                 },
                 {
-                    "file": "images/banana100x100.png",
-                    "name": "TEST_IMAGE",
+                    "file": "images/Orange_150x150.png",
+                    "name": "TEST_IMAGE_1",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Good.png",
+                    "name": "TEST_IMAGE_5",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/Bushido_135x.png",
+                    "name": "TEST_IMAGE_3",
                     "targetPlatforms": null,
                     "type": "bitmap"
                 }

@@ -11,6 +11,7 @@ static ScrollLayer *content_scroll_layer;
 
 int selected_main_menu_item;
 
+
 // void tick_handler1(struct tm *myTick, TimeUnits units_changed){
    
 //    strftime(time_format, sizeof(time_format), "%H:%M", myTick);
@@ -52,7 +53,7 @@ static void content_window_load(Window *window)
    layer_add_child(content_window_root_layer, scroll_layer_get_layer(content_scroll_layer));
    
                               GSize max_size;
-                                 max_size.w =144;
+                                 max_size.w = 144;
                                  max_size.h = text_layer_get_content_size(content_text_layer).h+1000;
                               text_layer_set_size(content_text_layer, max_size);
                               scroll_layer_set_content_size(content_scroll_layer, GSize(144, max_size.h));
